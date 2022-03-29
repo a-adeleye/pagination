@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./style/App.css";
+import React from "react";
+import Header from "./components/Header";
+import Pagination from "./pages/PaginationPage";
+import InfiniteScroll from "./pages/InfiniteScrollPage";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex flex-col gap-4 p-8">
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Pagination />}></Route>
+          <Route path="pagination" element={<Pagination />}></Route>
+          <Route path="infinite-scroll" element={<InfiniteScroll />}></Route>
+        </Routes>
+      </Router>
     </div>
   );
 }
