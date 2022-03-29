@@ -1,5 +1,4 @@
-import styled from "styled-components";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function Header() {
   const active = `bg-blue-600 text-white`;
