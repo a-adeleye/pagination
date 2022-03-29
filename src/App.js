@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="flex flex-col gap-4 p-8">
+    <div className="flex flex-col gap-4 py-4 px-8 h-screen">
       <Router>
         <Header />
         <Routes>

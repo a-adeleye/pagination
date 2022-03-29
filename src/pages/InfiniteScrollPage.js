@@ -42,7 +42,7 @@ export default function InfiniteScrollPage() {
   }
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 pb-4">
       <h1 className="font-bold text-2xl">Comments</h1>
 
       <InfiniteScroll
@@ -51,7 +51,7 @@ export default function InfiniteScrollPage() {
         hasMore={hasMoreComments}
         loader={<h4>Loading...</h4>}
         endMessage={
-          <p style={{ textAlign: "center" }}>
+          <p style={{ textAlign: "center", marginTop: "1em" }}>
             <b>You have caught up with all comments</b>
           </p>
         }
